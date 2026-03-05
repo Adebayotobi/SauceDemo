@@ -1,0 +1,56 @@
+{
+  "valid": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "lockedOut": {
+    "username": "locked_out_user",
+    "password": "secret_sauce"
+  },
+  "problem": {
+    "username": "problem_user",
+    "password": "secret_sauce"
+  },
+  "performanceGlitch": {
+    "username": "performance_glitch_user",
+    "password": "secret_sauce"
+  },
+  "invalidCases": [
+    {
+      "description": "wrong username",
+      "username": "invalid_user",
+      "password": "secret_sauce",
+      "expectedError": "Epic sadface: Username and password do not match any user in this service"
+    },
+    {
+      "description": "wrong password",
+      "username": "standard_user",
+      "password": "wrong_password",
+      "expectedError": "Epic sadface: Username and password do not match any user in this service"
+    },
+    {
+      "description": "empty username",
+      "username": "",
+      "password": "secret_sauce",
+      "expectedError": "Epic sadface: Username is required"
+    },
+    {
+      "description": "empty password",
+      "username": "standard_user",
+      "password": "",
+      "expectedError": "Epic sadface: Password is required"
+    },
+    {
+      "description": "both fields empty",
+      "username": "",
+      "password": "",
+      "expectedError": "Epic sadface: Username is required"
+    },
+    {
+      "description": "locked out user",
+      "username": "locked_out_user",
+      "password": "secret_sauce",
+      "expectedError": "Epic sadface: Sorry, this user has been locked out."
+    }
+  ]
+}

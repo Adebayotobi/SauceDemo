@@ -1,0 +1,37 @@
+{
+  "valid": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "zipCode": "10001"
+  },
+  "invalidCases": [
+    {
+      "description": "missing first name",
+      "firstName": "",
+      "lastName": "Doe",
+      "zipCode": "10001",
+      "expectedError": "Error: First Name is required"
+    },
+    {
+      "description": "missing last name",
+      "firstName": "John",
+      "lastName": "",
+      "zipCode": "10001",
+      "expectedError": "Error: Last Name is required"
+    },
+    {
+      "description": "missing zip code",
+      "firstName": "John",
+      "lastName": "Doe",
+      "zipCode": "",
+      "expectedError": "Error: Postal Code is required"
+    },
+    {
+      "description": "all fields empty",
+      "firstName": "",
+      "lastName": "",
+      "zipCode": "",
+      "expectedError": "Error: First Name is required"
+    }
+  ]
+}
